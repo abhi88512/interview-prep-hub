@@ -1,0 +1,109 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2.0 cm, % seperation between body and page edge from the top
+    bottom=2.0 cm, % seperation between body and page edge from the bottom
+    left=2.0 cm, % seperation between body and page edge from the left
+    right=2.0 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{array} % for tables
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage[
+    pdftitle={Abhilash's Cover Letter},
+    pdfauthor={Abhilash Mohanty},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\pagenumbering{gobble} % no page numbering
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\fontsize{20pt}{20pt}\selectfont \textbf{Abhilash Mohanty}}
+
+    \vspace{8pt}
+
+    \faEnvelope\ \href{mailto:abhilashmohanty2@outlook.com}{abhilashmohanty2@outlook.com} \quad
+    \faPhone\ \href{tel:+917809012869}{+91 78090 12869} \quad
+    \faLinkedin\ \href{https://linkedin.com/in/abhilashmohanty1993}{abhilashmohanty1993} \quad
+    \faGithub\ \href{https://github.com/abhi88512}{abhi88512}
+\end{center}
+
+\vspace{20pt}
+
+% Date and Recipient
+\textbf{Date:} \today
+
+\vspace{10pt}
+
+\textbf{To:}\\
+Hiring Manager\\
+S\&P Global Market Intelligence\\
+Cloud Engineering and Shared Services (CESS) Team\\
+Noida, Uttar Pradesh, India
+
+\vspace{15pt}
+
+\textbf{Subject: Application for Senior Software Developer/Engineer (Full Stack) Position}
+
+\vspace{15pt}
+
+Dear Hiring Manager,
+
+\vspace{10pt}
+
+I am writing to express my genuine enthusiasm for the Senior Software Developer position within the Cloud Engineering and Shared Services team at S\&P Global Market Intelligence. Your mission of transforming data into Essential Intelligence and commitment to accelerating progress through innovative technology solutions strongly resonates with my professional aspirations.
+
+\vspace{8pt}
+
+What excites me most about this role is the opportunity to build enterprise-grade solutions using modern technologies. I prefer hands-on coding and developing scalable applications from the ground up. The CESS team's focus on enabling cross-functional technology teams appeals to me. I enjoy solving complex technical challenges through clean, efficient code.
+
+\vspace{8pt}
+
+S\&P Global's culture of urgency and "Shift Left" approach appeals to me. I thrive in fast-paced environments that value proactive problem-solving. Your commitment to diversity and collaboration aligns with my core values. I am excited to work with highly skilled professionals and contribute to impactful technology solutions.
+
+\vspace{8pt}
+
+I am drawn to the global nature of this role. Working across different business lines to solve unique technical challenges excites me. I enjoy leveraging modern technology stacks to build robust, scalable solutions.
+
+\vspace{8pt}
+
+I would welcome the opportunity to discuss how my passion for innovation, collaborative mindset, and commitment to excellence can contribute to the CESS team's mission. Thank you for considering my application, and I look forward to the possibility of joining the S\&P Global family.
+
+\vspace{10pt}
+
+% Include the stylized signature
+\input{signature_abhilash}
+
+\end{document}
