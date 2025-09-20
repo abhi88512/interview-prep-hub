@@ -63,3 +63,37 @@ metadata:
 13. React renders everything under the root element
     - Correct. React applications are rendered within a single root DOM element, typically `<div id="root">`.
 
+### Small precise points
+
+1. In-browser Babel (type="text/babel") transforms JSX at runtime for quick demos.
+2. Browsers don't provide Node's `require()` function. Keeping `import`/`export` with the in-browser transformer may produce `require()` calls.
+3. `require is not defined` is a runtime symptom of CommonJS code running in the browser.
+4. Quick fix: remove `import`/`export` and use globals for tiny examples. Expose components as `window.ComponentName` to share across scripts.
+5. Ensure load order: define providers before consumers (counter.js before script.js). `type="module"` enables native imports but browsers don't transform JSX—precompile first.
+6. Bundlers perform optimizations: tree-shaking, minification, and asset fingerprinting.
+7. In-browser Babel is slower and not suitable for production use.
+
+Example (before / after):
+
+Before (problematic for in-browser Babel):
+
+```javascript
+// counter.js
+export const Counter = () => <div>Counter</div>;
+
+// script.js
+import { Counter } from './counter.js';
+ReactDOM.createRoot(document.getElementById('root')).render(<Counter />);
+```
+
+After (works with type="text/babel"):
+
+```javascript
+// counter.js
+const Counter = () => <div>Counter</div>;
+window.Counter = Counter;
+
+// script.js
+ReactDOM.createRoot(document.getElementById('root')).render(<Counter />);
+```
+
