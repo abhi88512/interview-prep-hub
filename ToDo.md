@@ -22,6 +22,12 @@ Required behavior
 	 - Do not invent unrelated questions: if the source material supports fewer than 10 high-quality questions, produce only the supported questions.
 	- Group questions by topic and label each with a difficulty tag: Easy / Medium / Hard.
 	- For each question include: source (file or supporting text), difficulty, and a 1-line answer hint or key points.
+- For any questions not already present, insert them into the most appropriate existing section .
+- Continue question numbering sequentially (no gaps).
+- Preserve the file’s compact Q + bulleted-answer style and existing headings.
+- Add short example snippets where helpful (e.g., useState, fragments, export/import).
+- Do not remove or reorder existing content unless necessary; only append or insert.
+- After edits, verify numbering and show the changed sections.
 
 Optional behavior
 -----------------
@@ -72,5 +78,7 @@ Acceptance criteria
 - No PII is leaked; CV contact details are redacted.
 
 If you want a different tone (concise, friendly, or formal), a different default question count, or to include model answers, specify it in the input.
+
+
 
 
