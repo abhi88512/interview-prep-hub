@@ -1,14 +1,3 @@
----
-metadata:
-  primary_file: react-basics.md
-  supporting_text: none
-  cv_file: MyCV.tex
-  generated_on: 2025-09-21
-  processed_files:
-    - react-basics.md: React fundamentals covering components, JSX, state management, and ecosystem tools
-    - MyCV.tex: Cover letter for Senior Software Developer position highlighting full-stack development experience
----
-
 ### React Basics
 
 1. What is react ?
